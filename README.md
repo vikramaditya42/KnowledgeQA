@@ -17,7 +17,7 @@ The architecture consists of the following components:
    - A custom RAG (Retrieve and Generate) pipeline is used:
      - Relevant documents are retrieved using the FAISS vector store.
      - A prompt template is filled with the retrieved context and the user’s question.
-     - The `Ollama` language model generates an answer based on the prompt.
+     - The `Llama 3.1` language model generates an answer based on the prompt.
 
 3. **Feedback Mechanism**:
    - Users can provide feedback, including corrections to answers.
