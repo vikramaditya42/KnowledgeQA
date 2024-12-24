@@ -1,0 +1,6 @@
+gradio==3.33.1
+langchain-community==0.1.0
+langchain-core==0.1.0
+faiss-cpu==1.7.4
+pandas==1.5.3
+datetime==5.1
