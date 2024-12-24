@@ -1,6 +1,6 @@
 # Enhanced PDF-Based Question Answering System
 
-This project implements a PDF-based Question Answering (QA) system using advanced language models and embedding techniques. Users can upload PDFs, ask questions based on the context of the documents, and provide feedback to improve the system's accuracy over time. The system also supports metadata-based document filtering and retraining embeddings using user feedback.
+This project implements a PDF-based Question Answering (QA) system using the **llama3.1** model via **Ollama**. Users can upload PDFs, ask questions based on the context of the documents, and provide feedback to improve the system's accuracy over time. The system also supports metadata-based document filtering and retraining embeddings using user feedback.
 
 ---
 
@@ -17,7 +17,7 @@ The architecture consists of the following components:
    - A custom RAG (Retrieve and Generate) pipeline is used:
      - Relevant documents are retrieved using the FAISS vector store.
      - A prompt template is filled with the retrieved context and the user’s question.
-     - The `Llama 3.1` language model generates an answer based on the prompt.
+     - The **llama3.1** model via **Ollama** generates an answer based on the prompt.
 
 3. **Feedback Mechanism**:
    - Users can provide feedback, including corrections to answers.
@@ -37,7 +37,7 @@ The architecture consists of the following components:
 1. **Python Libraries**:
    - **LangChain**:
      - `PyPDFLoader` for processing PDFs.
-     - `OllamaEmbeddings` and `Ollama` model for text embeddings and LLM-based answer generation.
+     - `OllamaEmbeddings` and **llama3.1** model for text embeddings and LLM-based answer generation.
      - `FAISS` for vector storage and similarity-based document retrieval.
    - **Pandas**:
      - Used for managing feedback data.
@@ -46,10 +46,13 @@ The architecture consists of the following components:
    - **FAISS**:
      - Fast similarity search for efficient document retrieval.
 
-2. **Prompt Template**:
+2. **Ollama**:
+   - **llama3.1** model for answering questions and generating embeddings.
+
+3. **Prompt Template**:
    - The system uses a structured template for the RAG pipeline to ensure consistency and relevance in responses.
 
-3. **Core Libraries**:
+4. **Core Libraries**:
    - `datetime`, `uuid`, `os` for metadata and unique ID generation.
 
 ---
@@ -65,9 +68,3 @@ The architecture consists of the following components:
 
 ---
 
-## **Deployment Steps**
-
-### 1. **Clone the Repository**
-```bash
-git clone <repository-url>
-cd <repository-directory>
